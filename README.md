@@ -1,8 +1,10 @@
 # docker multistage multiarch golang
 
-In this directory
-```
+ref: https://www.docker.com/blog/how-to-rapidly-build-multi-architecture-images-with-buildx/
 
+In this directory
+
+```
 # check/edit main.go
 go mod init dummy     # this creates the file go.mod 
 
@@ -16,4 +18,5 @@ docker ps | grep buildx
 docker buildx build --platform linux/amd64,linux/arm64  --push -t vvang/dummy:0.9 .
 
 # use the docker image
+```
 
